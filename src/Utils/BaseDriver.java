@@ -50,6 +50,7 @@ public class BaseDriver {
         }catch (Exception e ){
             System.out.println("Fucking firefox");
         }
+
         WebElement EmailAddress = driver.findElement(By.id("input-email"));
         EmailAddress.sendKeys("asd@gmail.com");
 
@@ -63,6 +64,6 @@ public class BaseDriver {
 
     @AfterMethod
     public void afterMethod(){
-//        driver.quit();
+        driver.quit();
     }
 }
