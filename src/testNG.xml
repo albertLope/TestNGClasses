@@ -1,0 +1,33 @@
+<suite name = "Suite1" >
+<!--    <test name = "test1">-->
+<!--        <parameter name = "browser" value = "chrome" />-->
+<!--        <parameter name = "itemName" value = "HTC" />-->
+<!--        <classes>-->
+<!--            <class name = "Day2._02_Subscribe"></class>-->
+<!--            <class name = "Day2._01_ValidateMenu"></class>-->
+<!--            <class name = "Day3._02_AddressFunctionality"></class>-->
+<!--            <class name = "Day2._05_EditAccount"></class>-->
+<!--            <class name = "Day6._01_PlaceOrder"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "test2">-->
+<!--        <parameter name = "browser" value = "firefox" />-->
+<!--        <parameter name = "itemName" value = "Palm" />-->
+<!--        <classes>-->
+<!--            <class name = "Day2._02_Subscribe"></class>-->
+<!--            <class name = "Day2._01_ValidateMenu"></class>-->
+<!--            <class name = "Day3._02_AddressFunctionality"></class>-->
+<!--            <class name = "Day2._05_EditAccount"></class>-->
+<!--            <class name = "Day6._01_PlaceOrder"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name = "test3">
+        <parameter name = "browser" value = "chrome" />
+        <parameter name = "itemName" value = "Palm" />
+        <classes>
+            <class name = "Day6._02_WishList"></class>
+        </classes>
+    </test>
+</suite>

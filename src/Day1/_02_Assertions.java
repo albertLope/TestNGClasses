@@ -40,11 +40,9 @@ public class _02_Assertions {
          */
     }
 
-
     String s1;
     @Test
     public void Null(){
-
         Assert.assertNull(s1); // talk about not null as well
     }
 

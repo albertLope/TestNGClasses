@@ -15,7 +15,7 @@ public class HooksForFirstClass {
         System.setProperty("webdriver.chrome.driver", "D:\\Selenium dependency\\drivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("http://opencart.abstracta.us/index.php?route=common/home");
+        driver.get("https://opencart.abstracta.us/index.php?route=account/login");
     }
 
     @AfterMethod
