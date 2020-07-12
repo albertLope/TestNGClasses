@@ -15,7 +15,7 @@ public class _02_AddressFunctionality extends BaseDriver {
 
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test
+    @Test(groups = {"Smoke" , "Regression"})
     public void AddAddress(){
 
         WebElement addressBook = driver.findElement(By.linkText("Address Book"));
@@ -57,10 +57,9 @@ public class _02_AddressFunctionality extends BaseDriver {
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
 
         reusableMethods.successMessageValidate(wait);
-
     }
 
-    @Test(dependsOnMethods = {"AddAddress"})
+    @Test(dependsOnMethods = {"AddAddress"} , groups = {"Regression"})
     public void editAddress(){
 
         WebElement addressBook = driver.findElement(By.linkText("Address Book"));
@@ -82,7 +81,7 @@ public class _02_AddressFunctionality extends BaseDriver {
         reusableMethods.successMessageValidate(wait);
     }
 
-    @Test(dependsOnMethods = {"editAddress"})
+    @Test(dependsOnMethods = {"editAddress"}  , groups = { "Regression"})
     public void deleteAddress(){
 
         WebElement addressBook = driver.findElement(By.linkText("Address Book"));

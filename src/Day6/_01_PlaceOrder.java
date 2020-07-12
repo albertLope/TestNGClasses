@@ -17,7 +17,7 @@ public class _01_PlaceOrder extends BaseDriver {
     _01_SearchFunctionality _01_SearchFunctionality = new _01_SearchFunctionality();
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test
+    @Test(groups = {"Regression"})
     @Parameters("itemName")
     public void AddToCart(String itemName){
 
@@ -35,7 +35,7 @@ public class _01_PlaceOrder extends BaseDriver {
 
     }
 
-    @Test
+    @Test(groups = {"Regression"})
     @Parameters("itemName")
     public void ProceedToCheckout(String itemName){
         AddToCart(itemName);

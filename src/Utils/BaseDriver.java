@@ -13,7 +13,8 @@ public class BaseDriver {
 
     protected WebDriver driver;
     protected WebDriverWait wait ;
-    @BeforeMethod
+
+    @BeforeMethod(groups = {"Smoke","Regression"})
     @Parameters("browser")
     public void BeforeClass(String browser){
 

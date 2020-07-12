@@ -1,13 +1,15 @@
 <suite name = "Suite1" parallel = "methods" thread-count="7">
     <test name = "test1">
 
+<!--        Need to make changes in the Base driver-->
+
         <parameter name = "browser" value = "chrome" />
         <parameter name = "itemName" value = "iPod" />
         <classes>
-            <class name = "Day2._02_Subscribe"></class>
+            <class name = "Day2._03_Subscribe"></class>
             <class name = "Day2._01_ValidateMenu"></class>
             <class name = "Day3._02_AddressFunctionality"></class>
-            <class name = "Day2._05_EditAccount"></class>
+            <class name = "Day2._04_EditAccount"></class>
             <class name = "Day6._01_PlaceOrder"></class>
             <class name = "Day6._02_WishList"></class>
         </classes>
@@ -18,10 +20,10 @@
         <parameter name = "itemName" value = "Palm" />
 
         <classes>
-            <class name = "Day2._02_Subscribe"></class>
+            <class name = "Day2._03_Subscribe"></class>
             <class name = "Day2._01_ValidateMenu"></class>
             <class name = "Day3._02_AddressFunctionality"></class>
-            <class name = "Day2._05_EditAccount"></class>
+            <class name = "Day2._04_EditAccount"></class>
             <class name = "Day6._01_PlaceOrder"></class>
             <class name = "Day6._02_WishList"></class>
         </classes>

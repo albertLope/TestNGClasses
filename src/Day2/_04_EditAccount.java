@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class _05_EditAccount extends BaseDriver {
+public class _04_EditAccount extends BaseDriver {
 
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test
+    @Test(groups = {"Smoke","Regression"})
     public void EditAccount(){
 
         AccountEdit("Steven" , "Gerard");

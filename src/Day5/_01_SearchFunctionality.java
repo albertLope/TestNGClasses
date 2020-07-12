@@ -13,7 +13,7 @@ import java.util.List;
 public class _01_SearchFunctionality extends BaseDriver {
 
 
-    @Test
+    @Test(groups = {"Smoke"})
     @Parameters("itemName")
     public void SearchFunction(String itemName ){
 

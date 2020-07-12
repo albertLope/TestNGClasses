@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _04_Intro {
+public class _02_ValidateMenuWithOutBeforeClass {
 
     @Test
     public void menuValidation() throws InterruptedException {

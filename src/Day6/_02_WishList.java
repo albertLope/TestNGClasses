@@ -15,7 +15,7 @@ public class _02_WishList extends BaseDriver {
     _01_SearchFunctionality _01_SearchFunctionality = new _01_SearchFunctionality();
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"Smoke","Regression"})
     @Parameters("itemName")
     public void addToWishList(String itemName){
 
@@ -40,7 +40,7 @@ public class _02_WishList extends BaseDriver {
 
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2 , groups = {"Smoke","Regression"})
     public void removeFromTheWishList(){
 
         driver.findElement(By.xpath("//span[contains(text(),'Wish List')]")).click();

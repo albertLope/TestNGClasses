@@ -6,18 +6,18 @@ public class _01_Intro {
 
 
     /*
-    @BeforeSuite
-        @BeforeTest
-            @BeforeGroups
-                @BeforeClass
-                    @BeforeMethod
-                        @Test
-                        @Test
-                  @AfterMethod
-                @BeforeClass
-            @BeforeGroups
-        @BeforeTest
-    @AfterSuite
+        @BeforeSuite
+            @BeforeTest
+                @BeforeGroups
+                    @BeforeClass
+                        @BeforeMethod
+                            @Test
+                            @Test
+                      @AfterMethod
+                    @BeforeClass
+                @BeforeGroups
+            @BeforeTest
+        @AfterSuite
     */
 
     @BeforeSuite

@@ -7,11 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class _02_Subscribe extends BaseDriver {
+public class _03_Subscribe extends BaseDriver {
 
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test
+    @Test(groups = "Smoke")
     public void testSubscribe1(){
 
         handleTheSubscribe();
@@ -32,11 +32,11 @@ public class _02_Subscribe extends BaseDriver {
             driver.findElement(By.xpath("(//label[@class='radio-inline'])[2]/input")).click();
         }
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(2000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
         WebElement continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
         continueButton.click();
