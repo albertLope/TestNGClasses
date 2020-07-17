@@ -16,11 +16,8 @@ public class _01_ValidateMenu extends BaseDriver {
     @Test
     public void menuValidation(){
 
-        List<WebElement> menuActualItems = driver.findElements(By.xpath("//ul[@class='nav navbar-nav']/li"));
-
-        List<String> menuActualStrItems = new ArrayList<>();
-
         List<String> menuExpectedList = new ArrayList<>();
+
         menuExpectedList.add("Desktops");
         menuExpectedList.add("Laptops & Notebooks");
         menuExpectedList.add("Components");
@@ -29,6 +26,10 @@ public class _01_ValidateMenu extends BaseDriver {
         menuExpectedList.add("Phones & PDAs");
         menuExpectedList.add("Cameras");
         menuExpectedList.add("MP3 Players");
+
+        List<WebElement> menuActualItems = driver.findElements(By.xpath("//ul[@class='nav navbar-nav']/li"));
+
+        List<String> menuActualStrItems = new ArrayList<>();
 
         menuActualStrItems =reusableMethods.webElementListToStringList(menuActualItems);
 

@@ -16,9 +16,7 @@ public class _01_SearchFunctionality extends BaseDriver {
     @Test(groups = {"Smoke"})
     @Parameters("itemName")
     public void SearchFunction(String itemName ){
-
         searchFunc(driver , itemName);
-
     }
 
     public void searchFunc(WebDriver driver , String itemName){

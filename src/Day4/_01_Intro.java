@@ -19,6 +19,19 @@ public class _01_Intro {
             @BeforeTest
         @AfterSuite
     */
+  /*  BeforeSuite
+'         BeforeTest
+     '   '   BeforeClass
+'   '   '        BeforeMethod
+        '   '   '   '   myTestMethod1
+'   '   '        AfterMethod
+    '   '   '   BeforeMethod
+        '   '   '   '   myTestMethod2
+'       '   '   AfterMethod
+    '   '   AfterClass
+'      AfterTest
+    AfterSuite
+   */
 
     @BeforeSuite
     public void bSuite(){
@@ -46,12 +59,12 @@ public class _01_Intro {
     }
 
     @Test
-    public void test1(){
+    public void TestInIntro1(){
         System.out.println("This is test 1 ");
     }
 
     @Test
-    public void test2(){
+    public void TestInIntro2(){
         System.out.println("This is test 2 ");
     }
 

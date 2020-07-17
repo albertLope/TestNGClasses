@@ -1,0 +1,14 @@
+<suite name = "Suite1">
+    <test name = "test1">
+        <groups>
+            <run>
+                <include name ="Regression"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name = "Day4._03_Groups"></class>
+        </classes>
+    </test>
+</suite>
+
+

@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -33,34 +34,26 @@ public class _02_AddressFunctionality extends BaseDriver {
         driver.findElement(By.xpath("//input[@name='postcode']")).sendKeys("12345");
         WebElement country = driver.findElement(By.xpath("//select[@name='country_id']"));
 
-        Select s1 = new Select(country);
-        s1.selectByIndex(reusableMethods.RandomGenerator(s1.getOptions().size()));
+        reusableMethods.chooseRandomFromDropdown(country);
 
+        WebDriverWait wait = new WebDriverWait(driver , 10);
 
+        By el = By.xpath("//select[@id='input-zone']/option");
 
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(el,3));
 
         WebElement regionState = driver.findElement(By.id("input-zone"));
-        Select s2 = new Select(regionState);
-        s2.selectByIndex(reusableMethods.RandomGenerator(s2.getOptions().size()));
+        reusableMethods.chooseRandomFromDropdown(regionState);
 
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
 
         reusableMethods.successMessageValidate(wait);
+
     }
 
     @Test(dependsOnMethods = {"AddAddress"} , groups = {"Regression"})
     public void editAddress(){
+
 
         WebElement addressBook = driver.findElement(By.linkText("Address Book"));
         addressBook.click();
@@ -91,6 +84,7 @@ public class _02_AddressFunctionality extends BaseDriver {
         deleteButtons.get(deleteButtons.size()-1).click();
 
         reusableMethods.successMessageValidate(wait);
+
     }
 
 }

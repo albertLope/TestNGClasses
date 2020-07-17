@@ -41,7 +41,7 @@ public class _03_Subscribe extends BaseDriver {
         WebElement continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
         continueButton.click();
 
-        reusableMethods.successMessageValidate(wait);
+        reusableMethods.successMessageValidate2(driver);
     }
 
 }

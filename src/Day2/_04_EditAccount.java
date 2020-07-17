@@ -33,5 +33,7 @@ public class _04_EditAccount extends BaseDriver {
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
 
         reusableMethods.successMessageValidate(wait);
+
     }
+
 }

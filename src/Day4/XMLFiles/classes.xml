@@ -1,0 +1,10 @@
+<suite name = "Suite1">
+    <test name = "test1">
+        <classes>
+            <class name = "Day4.class1"></class>
+            <class name = "Day4.class2"></class>
+        </classes>
+    </test>
+
+</suite>
+

@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -25,7 +26,6 @@ public class ReusableMethods extends BaseDriver{
 
     }
 
-
     public void compareToList(List<String> l1  , List<String> l2 ){
 
         for(int i = 0 ; i <l1.size();i++){
@@ -41,10 +41,19 @@ public class ReusableMethods extends BaseDriver{
         return rnd.nextInt(max);
     }
 
+    public void successMessageValidate2(WebDriver driver){
+
+        String success = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();
+
+        Assert.assertTrue(success.contains("uccess"));
+    }
+
     public void successMessageValidate(WebDriverWait wait){
+
         String success = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='alert alert-success']"))) .getText();
 
         Assert.assertTrue(success.contains("uccess"));
+
     }
 
     public void ListContainsString(List<WebElement>  l1 , String expectedString){
@@ -60,5 +69,12 @@ public class ReusableMethods extends BaseDriver{
         Assert.assertTrue(b1,expectedString+" wished item should be in the list but it is not");
     }
 
+    public void chooseRandomFromDropdown(WebElement dropdwon){
+
+        Select s1 = new Select(dropdwon);
+
+        s1.selectByIndex(RandomGenerator(s1.getOptions().size()));
+
+    }
 
 }
