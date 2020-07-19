@@ -4,22 +4,24 @@ import Utils.BaseDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class _05_Footer extends BaseDriver {
+public class _01_Footer_StartHere extends BaseDriver {
 
     /*
         In case if we need extra tests then we can start using these
 
      */
-    @Test(enabled = false)
-    public void contactUs(){
+    @Test
+    @Parameters({"enquiry" })
+    public void contactUs(String enquiry){
 
         driver.findElement(By.linkText("Contact Us")).click();
 
-        driver.findElement(By.id("input-enquiry")).sendKeys("This is an enquiry from techno can u hear me");
+        driver.findElement(By.id("input-enquiry")).sendKeys(enquiry);
 
         driver.findElement(By.xpath("//input[@value='Submit']")).click();
 
@@ -29,7 +31,7 @@ public class _05_Footer extends BaseDriver {
 
     }
 
-    @Test(enabled = false)
+    @Test
     public void specials(){
 
         driver.findElement(By.linkText("Specials")).click();
@@ -42,7 +44,7 @@ public class _05_Footer extends BaseDriver {
 
     }
 
-    @Test
+    @Test(enabled = false)
     public void Information(){
 
         List<WebElement>  informationList = driver.findElements(By.xpath("//h5[text()='Information']/parent::div//a"));

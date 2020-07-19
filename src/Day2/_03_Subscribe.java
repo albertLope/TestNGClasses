@@ -11,7 +11,7 @@ public class _03_Subscribe extends BaseDriver {
 
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test(groups = "Smoke")
+    @Test
     public void testSubscribe1(){
 
         handleTheSubscribe();

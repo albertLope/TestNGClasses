@@ -16,7 +16,7 @@ public class _02_AddressFunctionality extends BaseDriver {
 
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test(groups = {"Smoke" , "Regression"})
+    @Test
     public void AddAddress(){
 
         WebElement addressBook = driver.findElement(By.linkText("Address Book"));
@@ -42,6 +42,12 @@ public class _02_AddressFunctionality extends BaseDriver {
 
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(el,3));
 
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         WebElement regionState = driver.findElement(By.id("input-zone"));
         reusableMethods.chooseRandomFromDropdown(regionState);
 
@@ -51,7 +57,7 @@ public class _02_AddressFunctionality extends BaseDriver {
 
     }
 
-    @Test(dependsOnMethods = {"AddAddress"} , groups = {"Regression"})
+    @Test(dependsOnMethods = {"AddAddress"} )
     public void editAddress(){
 
 
@@ -74,7 +80,7 @@ public class _02_AddressFunctionality extends BaseDriver {
         reusableMethods.successMessageValidate(wait);
     }
 
-    @Test(dependsOnMethods = {"editAddress"}  , groups = { "Regression"})
+    @Test(dependsOnMethods = {"editAddress"} )
     public void deleteAddress(){
 
         WebElement addressBook = driver.findElement(By.linkText("Address Book"));

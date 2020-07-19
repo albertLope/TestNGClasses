@@ -15,8 +15,8 @@ public class BaseDriver {
     protected WebDriverWait wait ;
 
     @BeforeMethod(groups = {"Smoke","Regression"})
-    @Parameters("browser")
-    public void BeforeClass(String browser){
+    @Parameters({"browser" , "username","password" })
+    public void BeforeClass(String browser , String username , String passwordStr){
 
         if(browser.equals("chrome")) {
             System.setProperty("webdriver.chrome.driver", "D:\\Selenium dependency\\drivers\\chromedriver.exe");
@@ -53,10 +53,10 @@ public class BaseDriver {
         }
 
         WebElement EmailAddress = driver.findElement(By.id("input-email"));
-        EmailAddress.sendKeys("asd@gmail.com");
+        EmailAddress.sendKeys(username);
 
         WebElement password = driver.findElement(By.id("input-password"));
-        password.sendKeys("123qweasd");
+        password.sendKeys(passwordStr);
 
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Login']"));
         loginButton.click();
@@ -65,6 +65,6 @@ public class BaseDriver {
 
     @AfterMethod
     public void afterMethod(){
-        driver.quit();
+//        driver.quit();
     }
 }

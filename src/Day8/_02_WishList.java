@@ -1,6 +1,6 @@
-package Day6;
+package Day8;
 
-import Day5._01_SearchFunctionality;
+import Day5._02_SearchFunctionality;
 import Utils.BaseDriver;
 import Utils.ReusableMethods;
 import org.openqa.selenium.By;
@@ -12,7 +12,7 @@ import java.util.List;
 
 public class _02_WishList extends BaseDriver {
 
-    _01_SearchFunctionality _01_SearchFunctionality = new _01_SearchFunctionality();
+    _02_SearchFunctionality _01_SearchFunctionality = new _02_SearchFunctionality();
     ReusableMethods reusableMethods = new ReusableMethods();
 
     @Test(priority = 1, groups = {"Smoke","Regression"})

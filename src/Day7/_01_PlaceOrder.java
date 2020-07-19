@@ -1,6 +1,6 @@
-package Day6;
+package Day7;
 
-import Day5._01_SearchFunctionality;
+import Day5._02_SearchFunctionality;
 import Utils.BaseDriver;
 import Utils.ReusableMethods;
 import org.openqa.selenium.By;
@@ -14,11 +14,10 @@ import java.util.List;
 
 public class _01_PlaceOrder extends BaseDriver {
 
-    _01_SearchFunctionality _01_SearchFunctionality = new _01_SearchFunctionality();
+    _02_SearchFunctionality _01_SearchFunctionality = new _02_SearchFunctionality();
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test(groups = {"Regression"})
-    @Parameters("itemName")
+
     public void AddToCart(String itemName){
 
         System.out.println(itemName + "<--- item name ");
@@ -35,7 +34,7 @@ public class _01_PlaceOrder extends BaseDriver {
 
     }
 
-    @Test(groups = {"Regression"})
+    @Test
     @Parameters("itemName")
     public void ProceedToCheckout(String itemName){
         AddToCart(itemName);

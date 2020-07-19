@@ -10,7 +10,7 @@ public class _04_EditAccount extends BaseDriver {
 
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test(groups = {"Smoke","Regression"})
+    @Test
     public void EditAccount(){
 
         AccountEdit("Steven" , "Gerard");

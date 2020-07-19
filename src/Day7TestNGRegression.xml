@@ -14,8 +14,8 @@
                 <class name = "Day2._01_ValidateMenu"></class>
                 <class name = "Day3._02_AddressFunctionality"></class>
                 <class name = "Day2._04_EditAccount"></class>
-                <class name = "Day6._01_PlaceOrder"></class>
-                <class name = "Day6._02_WishList"></class>
+                <class name = "Day7._01_PlaceOrder"></class>
+
             </classes>
 
     </test>
